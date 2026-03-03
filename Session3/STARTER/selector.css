@@ -46,3 +46,7 @@ input[type="number"] {
     padding: 25px;               /* Abstand innen */
     margin-top: 40px;            /* Abstand oben */
 }
+
+#submit_button {
+    color: blue;
+}

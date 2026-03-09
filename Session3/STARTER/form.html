@@ -16,28 +16,31 @@
   
 
       <!--3.2.1 Create inputs to ask participants for some personal information, like ID (as text input; placehoder text as ABC123), age (as number input, add min = 18 and max = 35 input)-->
-      <label>1. ID: *</label>
-      <input >
-      <br>
-      <br>
-      <label>2. Age: </label>
+      <p>1. ID: <span style="color:crimson;">*</span></p>
+      <input type="text" placeholder="ABC123" required> 
+        <br> <br> 
+
+      <p>2. Age: <span style="color:crimson">*</span> </p>
       <input type="number" id="age" min="18" max="99" value="18" required>
 
 
+
       <!--3.2.2 Add drop-down more options (Non-Binary) for gender information-->
-      <p>3. Gender:</p>
-      <select name="gender" >
-        <option value="" disabled selected>Please select your gender</option>
+      <p>3. Gender: <span style="color:crimson;">*</span></p>
+    <select name="gender" required> 
+        <option disabled selected> Please select your gender</option>
+        <option>Non-Binary</option>
         <option>Woman</option>
         <option>Man</option>
-      </select>
-      <br><br> 
+    </select>
+    <br> <br> 
 
       <!--3.2.3 Add an input as a type of input to "range" for this alertness question, don't forget about the min and max values for the range-->
        <h3>Tiredness Rating</h3>
        <p>How tired are you right now? </p>
-       <p>(1-Not at all;5-Too tired to do anything)</p>
-       <input >
+       <p>(1-Not at all; 5-Too tired to do anything)</p>
+       <input type="range" min="1" max="5" step="1" id="tiredness" name="tiredness">
+       <br><br> 
 
       <h3>Happyness Rating</h3>
       <p id="happiness-q">How happy are you right now?</p>
@@ -75,15 +78,17 @@
       <div class="final">
       <!--3.2.4 change the type of input to "checkbox" for the "consent_yes" and "consent_no"-->
         <h3>Please confirm your consent: </h3>
-        <input type="" name="consent_yes" value="yes"> I have been given information about this research study and its risks and benefits and have had the opportunity to ask questions and have them answered to my satisfaction. I consent to participate in this study. <br> 
+        <input type="checkbox" name="consent_yes" value="yes"> I have been given information about this research study and its risks and benefits and have had the opportunity to ask questions and have them answered to my satisfaction. I consent to participate in this study. <br> 
         <br><br>
-        <input type="" name="consent_no" value="no"> I changed my mind and I do not consent to participate in this study. <br> 
+        <input type="checkbox" name="consent_no" value="no"> I changed my mind and I do not consent to participate in this study. <br> 
         <br><br>
 
         <p> For further information, please contact your experimenter (XYZ; xyz@uzh.ch).</p>
       </div>
         
       <!-- 3.2.5 change the color of 'Submit To Continue' to blue externally using id; and change the background-color of all class="final" to beige-->
+      <button class="favorirte styled" type= "button"> Sumbit to Continue </button> <a href="example_task_instruction.html"></a>
+      <br><br> 
       <input id="submit_button" type="button" value="Submit To Continue" class="final">
   
 
@@ -95,7 +100,16 @@
 
       </form>
 
-      
+      <form action="example_task_instruction.html" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required> <br><br> 
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required> <br><br> 
+        <input type="submit" value="Submit">
+      </form>
+
+
+
 </body>
 </html>
 

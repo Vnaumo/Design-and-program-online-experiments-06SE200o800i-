@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+const age = 10;
+let ageGroup;
+if(age<18){
+    age Group = "Child";
+} else{
+    ageGroup="Adult";
+}
+console.log("ageGroup:", ageGroup);
+
+let age = 18;
+let ageGroup = age < 18? "child":"adult"; 
+console.log("ageGroup", ageGroup);
+
+for(let i=0; 1<5; i++) {
+    console.log("i/number", i); 
+}
+
+
+<body>
+
+  <h1>...</h1>
+
+  <script src="loops_exercise.js"></script>
+
+</body>

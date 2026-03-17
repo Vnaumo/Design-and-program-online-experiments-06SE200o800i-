@@ -6,7 +6,11 @@
 const threshold = 300; 
 function isFasterThanThreshold(responseTime) {
     // Write logic to check if the reaction time is faster than the threshold
-
+if (responseTime < threshold) {
+    return "too fast";
+} else {
+    return "valid";
+}
   }
   
 // Call the function with different inputs
@@ -21,7 +25,15 @@ console.log(`Expected output: ${isFasterThanThreshold(400)}`)
 // call the function e.g., calculateAverageRT(responseTimes); .
 
 // Write your function here
+function calculateAverageRT(responseTimes) {
+    let sum = 0;
 
+    for (let i = 0; i < responseTimes.length; i++) {
+        sum += responseTimes[i];
+    }
+
+    return sum / responseTimes.length;
+}
 
 
   // Example input

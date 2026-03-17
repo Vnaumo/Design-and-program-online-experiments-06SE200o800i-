@@ -11,31 +11,32 @@
  let reactionTimes = [];
  // add your code here
 
+for (let i = 0; i < recordedTimes.length; i++) {
+    let reactionTime.push(recordedTimes[i] - 200);
 
- console.log("reactionTimes: ",reactionTimes);
+    console.log("iterate:", i);
+    console.log("recordedTime:", reactionTime);
+}
+
+console.log("reactionTimes:", reactionTimes);
 
 
- 
  /* # Plus 1: can you think of more than one way of doing it? */
  
  
- 
- 
- 
- 
  /* exercise 5.2.2 */
- 
  //Using a while loop: when the total reaction time exceeds a certain threshold (e.g., 2000 milliseconds), console.log the thisTrial. thisTrial will start from 1.
- 
-// add your code below
+ // add your code below
 
 let totalTime = 0;
 let thisTrial;
-let j = 0
+let j = 0;
+console.log("j outside", j); 
 
-
-
-
-
-
- console.log(`Cumulative reaction time exceeded 2000 ms at trial ${thisTrial}.`);
+while (totalTime <= 2000 && j < recordedTimes.length) {
+    totalTime += recordedTimes[j] - 200;   // Zeit addieren
+    j++; 
+    console.log(j); 
+    thisTrial = j;               // Trial beginnt bei 1
+}
+ console.log(`Cumulative reaction time exceeded 2000 ms at trial ${thisTrial}`);
